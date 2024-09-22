@@ -1,3 +1,28 @@
+#version: '3'
+#services:
+#  app:
+#    image: decidim/decidim:0.28.2
+#    volumes:
+#      - .:/app
+#      - bundle:/usr/local/bundle
+#      - node_modules:/app/node_modules
+#    environment:
+#      - PORT=3000
+#      - DATABASE_URL=${DATABASE_URL}
+#      - RAILS_ENV=development
+#    ports:
+#      - 3000:3000
+#    links:
+#      - pg
+#    command: bundle exec puma
+#  pg:
+#    image: postgres
+#    volumes:
+#      - pg-data:/var/lib/postgresql/data
+#volumes:
+#  node_modules: {}
+#  bundle: {}
+#  pg-data: {}
 version: '3'
 services:
   app:
@@ -20,6 +45,8 @@ services:
     image: postgres
     volumes:
       - pg-data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_HOST_AUTH_METHOD=trust
 volumes:
   node_modules: {}
   bundle: {}
