@@ -1,7 +1,7 @@
 version: '3'
 services:
   app:
-    image: decidim/decidim:0.28.2
+    image: decidim/decidim:0.29.0
     volumes:
       - .:/app
       - bundle:/usr/local/bundle
@@ -10,6 +10,7 @@ services:
       - PORT=3000
       - DATABASE_HOST=pg
       - DATABASE_USERNAME=postgres
+      - DATABASE_PASSWORD=postgres
       - RAILS_ENV=development
     ports:
       - 3000:3000
@@ -18,6 +19,8 @@ services:
     command: bundle exec puma
   pg:
     image: postgres
+    environment:
+      - POSTGRES_PASSWORD=postgres
     volumes:
       - pg-data:/var/lib/postgresql/data
 volumes:
