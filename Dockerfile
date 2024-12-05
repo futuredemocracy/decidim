@@ -28,7 +28,7 @@ COPY . /code
 RUN #yarn install
 RUN npm install
 
-RUN #bundle exec rake assets:precompile
+RUN bundle exec rake assets:precompile
 RUN #/bin/sh -c bundle exec rake assets:precompile
 
 #ENV RAILS_ENV=production
