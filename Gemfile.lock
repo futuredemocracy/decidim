@@ -744,7 +744,7 @@ GEM
     websocket-driver (0.7.6)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
-    wicked_pdf (2.8.0)
+    wicked_pdf (2.7.0)
       activesupport
     wisper (2.0.1)
     wisper-rspec (1.1.0)
@@ -769,7 +769,7 @@ DEPENDENCIES
   net-smtp (~> 0.3.1)
   puma (>= 6.3.1)
   web-console (~> 4.2)
-  wicked_pdf (~> 2.1)
+  wicked_pdf (< 2.8)
 
 RUBY VERSION
    ruby 3.2.2p53
