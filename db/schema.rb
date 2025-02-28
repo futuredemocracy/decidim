@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_12_04_152067) do
+ActiveRecord::Schema[7.0].define(version: 2025_01_03_140330) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
   enable_extension "pg_trgm"
@@ -1020,6 +1020,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_12_04_152067) do
     t.jsonb "content_security_policy", default: {}
     t.jsonb "name", default: {}, null: false
     t.index ["host"], name: "index_decidim_organizations_on_host", unique: true
+    t.index ["reference_prefix"], name: "index_decidim_organizations_on_reference_prefix", unique: true
   end
 
   create_table "decidim_pages_pages", id: :serial, force: :cascade do |t|
