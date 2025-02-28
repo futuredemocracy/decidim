@@ -1,0 +1,14 @@
+:concurrency: 5
+:queues:
+  - default
+  - mailers
+  - exports
+  - newsletter
+  - vote_reminder
+  - events
+  - user_report
+  - translations
+  - metrics
+  - newsletters_opt_in
+  - reminders
+  - close_meeting_reminder
