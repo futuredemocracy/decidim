@@ -34,8 +34,8 @@ RUN #/bin/sh -c bundle exec rake assets:precompile
 #ENV RAILS_ENV=production
 ENV RAILS_SERVE_STATIC_FILES=true
 
-EXPOSE 3000
+EXPOSE 80
 
 ENTRYPOINT []
 
-CMD ["bundle", "exec", "rails", "s", "-b", "0.0.0.0"]
+CMD ["bundle", "exec", "rails", "s", "-b", "0.0.0.0", "-p", "80"]
