@@ -1,4 +1,4 @@
-ARG ruby_version=3.2.2
+ARG ruby_version=3.3.4
 
 FROM ruby:${ruby_version}
 
@@ -11,7 +11,6 @@ RUN apt-get update && apt-get install -y \
   git \
   imagemagick \
   wget \
-  wkhtmltopdf \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
