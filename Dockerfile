@@ -26,9 +26,9 @@ RUN gem install bundler --version '>= 2.3.12'
 COPY Gemfile /code/Gemfile
 COPY Gemfile.lock /code/Gemfile.lock
 
-RUN bundle check || bundle install
-
 COPY . /code
+
+RUN bundle check || bundle install
 
 RUN #yarn install
 RUN npm install
