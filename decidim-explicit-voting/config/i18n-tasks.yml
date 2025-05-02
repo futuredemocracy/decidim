@@ -1,0 +1,60 @@
+# File: ~/git/decidim-explicitvoting/decidim-explicit-voting/config/i18n-tasks.yml
+
+# Base language
+base_locale: pl
+
+# Where to read translations from
+data:
+  read:
+    # Only from our module
+    - config/locales/%{locale}.yml
+
+  yaml:
+    write:
+      line_width: -1 # Do not wrap lines
+
+# Where to search for key usage (within the current module)
+search:
+  paths:
+    - app
+    - lib
+  # Where to resolve relative keys (e.g., t(".key"))
+  relative_roots:
+    - app/controllers
+    - app/helpers
+    - app/mailers
+    - app/presenters
+    - app/services
+    - app/views
+    - app/cells
+  strict: false # Allow guessing dynamic keys
+
+# Keys to ignore when checking for MISSING translations
+ignore_missing:
+  # Standard Decidim keys
+  - components.*
+  - browse_resource
+  - email_subject
+  - explanation
+
+# Keys to ignore when checking for UNUSED translations
+ignore_unused:
+  # Standard Decidim keys
+  - devise.*
+  - activemodel.*
+  - activerecord.*
+  - decidim.profiles.show.members
+  - en
+
+  # Keys used dynamically in our module
+  - decidim.components.explicit_voting.name
+  - decidim.authorization_transfer.explicit_voting_votes.*
+  - decidim.vote_types.*
+  - decidim.votes.*
+  - decidim.explicit_voting.admin.voting_options.*
+  - decidim.explicit_voting.admin.votings.*
+  - decidim.explicit_voting.votings.*
+  - decidim.explicit_voting.votes.*
+  # Keys used in the component settings
+  - decidim.components.explicit_voting.settings.global.announcement
+  - decidim.components.explicit_voting.settings.step.announcement

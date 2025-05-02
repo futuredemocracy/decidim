@@ -9,8 +9,12 @@ gem "decidim", "0.29.2"
 # gem "decidim-design", "0.29.1"
 # gem "decidim-initiatives", "0.29.1"
 # gem "decidim-templates", "0.29.1"
+gem "decidim-explicit_voting", path: "."
 
 gem "bootsnap", "~> 1.3"
+
+gem "prawn", "~> 2.4"
+gem "prawn-table"
 
 gem "puma", ">= 6.3.1"
 
@@ -26,6 +30,7 @@ group :development, :test do
   gem "net-imap", "~> 0.2.3"
   gem "net-pop", "~> 0.1.1"
   gem "net-smtp", "~> 0.3.1"
+  gem "pry"
 end
 
 group :development do

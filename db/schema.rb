@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2025_01_03_140330) do
+ActiveRecord::Schema[7.0].define(version: 2025_05_02_114903) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
   enable_extension "pg_trgm"
@@ -554,6 +554,40 @@ ActiveRecord::Schema[7.0].define(version: 2025_01_03_140330) do
     t.index ["decidim_user_group_id"], name: "index_decidim_endorsements_on_decidim_user_group_id"
     t.index ["resource_type", "resource_id", "decidim_author_type", "decidim_author_id", "decidim_user_group_id"], name: "idx_endorsements_rsrcs_and_authors", unique: true
     t.index ["resource_type", "resource_id"], name: "index_decidim_endorsements_on_resource_type_and_resource_id"
+  end
+
+  create_table "decidim_explicit_voting_options", force: :cascade do |t|
+    t.bigint "voting_id"
+    t.string "name", null: false
+    t.integer "position"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["voting_id"], name: "decidim_exp_voting_options_on_voting_id"
+  end
+
+  create_table "decidim_explicit_voting_votes", force: :cascade do |t|
+    t.bigint "voting_id"
+    t.bigint "voting_option_id"
+    t.bigint "decidim_user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["decidim_user_id"], name: "decidim_exp_voting_votes_on_user_id"
+    t.index ["voting_id", "decidim_user_id"], name: "decidim_exp_votes_unique_user_voting", unique: true
+    t.index ["voting_id"], name: "decidim_exp_voting_votes_on_voting_id"
+    t.index ["voting_option_id"], name: "decidim_exp_voting_votes_on_option_id"
+  end
+
+  create_table "decidim_explicit_voting_votings", force: :cascade do |t|
+    t.jsonb "title", null: false
+    t.jsonb "description", null: false
+    t.datetime "start_date", null: false
+    t.datetime "end_date", null: false
+    t.boolean "secret", default: false
+    t.integer "quorum", default: 0
+    t.bigint "decidim_component_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["decidim_component_id"], name: "decidim_exp_voting_votings_on_component_id"
   end
 
   create_table "decidim_follows", force: :cascade do |t|
@@ -1704,6 +1738,11 @@ ActiveRecord::Schema[7.0].define(version: 2025_01_03_140330) do
   add_foreign_key "decidim_debates_debates", "decidim_scopes"
   add_foreign_key "decidim_editor_images", "decidim_organizations"
   add_foreign_key "decidim_editor_images", "decidim_users", column: "decidim_author_id"
+  add_foreign_key "decidim_explicit_voting_options", "decidim_explicit_voting_votings", column: "voting_id", on_delete: :cascade
+  add_foreign_key "decidim_explicit_voting_votes", "decidim_explicit_voting_options", column: "voting_option_id", on_delete: :cascade
+  add_foreign_key "decidim_explicit_voting_votes", "decidim_explicit_voting_votings", column: "voting_id", on_delete: :cascade
+  add_foreign_key "decidim_explicit_voting_votes", "decidim_users"
+  add_foreign_key "decidim_explicit_voting_votings", "decidim_components"
   add_foreign_key "decidim_identities", "decidim_organizations"
   add_foreign_key "decidim_newsletters", "decidim_users", column: "author_id"
   add_foreign_key "decidim_participatory_process_steps", "decidim_participatory_processes"

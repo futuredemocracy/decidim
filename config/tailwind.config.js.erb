@@ -1,0 +1,92 @@
+// This file is used to override Decidim's default Tailwind config.
+// You can use it to add or extend anything Tailwind provides.
+//
+// To regenerate the base config if needed, see: https://docs.decidim.org/en/develop/customize/styles/
+
+const defaultTheme = require("tailwindcss/defaultTheme");
+const colors = require("tailwindcss/colors");
+const plugin = require("@tailwindcss/typography");
+
+const { inherit, current, transparent, white, neutral } = colors;
+
+const withOpacity =
+  (variable) =>
+    ({ opacityValue }) =>
+      opacityValue === undefined
+        ? `rgb(var(${variable}))`
+        : `rgb(var(${variable}) / ${opacityValue})`;
+
+module.exports = {
+  content: [<%= tailwind_content_directories %>].flatMap(directory => [
+    `${directory}/app/views/**/*.html.erb`,
+    `${directory}/app/cells/**/*.{rb,erb}`,
+    `${directory}/app/helpers/**/*.rb`,
+    `${directory}/app/packs/**/*.js`,
+    `${directory}/lib/**/*.rb`
+  ]),
+
+  theme: {
+    colors: {
+      // Decidim-specific + all default colors
+      ...colors,
+      inherit,
+      current,
+      transparent,
+      white,
+      neutral,
+      primary: withOpacity("--primary-rgb"),
+      secondary: withOpacity("--secondary-rgb"),
+      tertiary: withOpacity("--tertiary-rgb"),
+      success: "#28A745",
+      alert: "#ED1C24",
+      warning: "#FFB703",
+      black: "#020203",
+      gray: {
+        DEFAULT: "#6B7280CC", // 80% opacity
+        2: "#3E4C5C",
+        3: "#E1E5EF",
+        4: "#242424",
+        5: "#F6F8FA"
+      },
+      background: {
+        DEFAULT: "#F3F4F7",
+        2: "#FAFBFC",
+        3: "#EFEFEF",
+        4: "#E4EEFF99", // 60% opacity
+        5: "#E9E9E9"
+      }
+    },
+
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: "1rem",
+        lg: "4rem"
+      }
+    },
+
+    fontFamily: {
+      sans: ["Source Sans Pro", ...defaultTheme.fontFamily.sans]
+    },
+
+    fontSize: {
+      xs: ["13px", "16px"],
+      sm: ["14px", "18px"],
+      md: ["16px", "20px"],
+      lg: ["18px", "23px"],
+      xl: ["20px", "25px"],
+      "2xl": ["24px", "30px"],
+      "3xl": ["32px", "40px"],
+      "4xl": ["36px", "45px"],
+      "5xl": ["48px", "60px"]
+    },
+
+    extend: {
+      transitionProperty: {
+        top: "top"
+      }
+    }
+  },
+
+  plugins: [plugin]
+}
