@@ -13,9 +13,8 @@ module Decidim
       belongs_to :component, foreign_key: "decidim_component_id", class_name: "Decidim::Component"
       delegate :organization, to: :component
 
-      has_many :options, class_name: "Decidim::ExplicitVoting::VotingOption", foreign_key: "voting_id", dependent: :destroy
-      has_many :votes, class_name: "Decidim::ExplicitVoting::Vote", foreign_key: "voting_id", dependent: :destroy
-      # has_many :protocols, class_name: "Decidim::ExplicitVoting::Protocol", foreign_key: "voting_id", dependent: :destroy
+      has_many :options, class_name: "Decidim::ExplicitVoting::VotingOption", dependent: :destroy
+      has_many :votes, class_name: "Decidim::ExplicitVoting::Vote", dependent: :destroy
 
       validates :end_date, presence: true
       validate :validate_title_presence
@@ -86,7 +85,7 @@ module Decidim
         return unless string.include?("=>")
 
         YAML.safe_load(
-          string.gsub(/=>/, ":"), # Zamień Ruby Hash na YAML format
+          string.gsub("=>", ":"),
           permitted_classes: [Hash],
           aliases: true
         )
@@ -94,9 +93,9 @@ module Decidim
         nil
       end
 
-      def method_missing(method, *args, &block)
+      def method_missing(method, *args, &)
         if method.to_s =~ /^(title|description)_([a-z]{2})$/
-          translated_field($1)[ $2 ] || ""
+          translated_field(::Regexp.last_match(1))[::Regexp.last_match(2)] || ""
         else
           super
         end
@@ -107,15 +106,11 @@ module Decidim
       end
 
       def validate_title_presence
-        if title.blank? || (title.is_a?(Hash) && title[default_locale].blank?)
-          errors.add(:title, :invalid)
-        end
+        errors.add(:title, :invalid) if title.blank? || (title.is_a?(Hash) && title[default_locale].blank?)
       end
 
       def validate_description_presence
-        if description.blank? || (description.is_a?(Hash) && description[default_locale].blank?)
-          errors.add(:description, :invalid)
-        end
+        errors.add(:description, :invalid) if description.blank? || (description.is_a?(Hash) && description[default_locale].blank?)
       end
     end
   end
