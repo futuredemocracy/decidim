@@ -14,10 +14,10 @@ Gem::Specification.new do |s|
   s.name = "decidim-explicit_voting"
   s.files = Dir["{app,config,db,lib}/**/*", "LICENSE-AGPLv3.txt", "Rakefile", "README.md"]
 
-  s.add_dependency "decidim-core", "~> 0.29.2"
-  s.add_dependency "decidim-admin", "~> 0.29.2"
-  s.add_dependency "decidim-participatory_processes", "~> 0.29.2"
+  s.add_dependency "decidim-core", "~> 0.30.0"
+  s.add_dependency "decidim-admin", "~> 0.30.0"
+  s.add_dependency "decidim-participatory_processes", "~> 0.30.0"
   s.add_dependency "prawn", "~> 2.4"
 
-  s.add_development_dependency "decidim-dev", "~> 0.29.2"
+  s.add_development_dependency "decidim-dev", "~> 0.30.0"
 end

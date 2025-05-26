@@ -1,0 +1,9 @@
+pl:
+  sms:
+    authorizations:
+      create:
+        text: "Kod weryfikacyjny portalu decydujemy.org.pl: %{code}. Nie udostepniaj go nikomu. Fundacja Demokracja Przyszlosci"
+      destroy:
+        too_early: "Zresetowanie kodu weryfikacyjnego jest możliwe po upływie 10 minut od wygenerowania poprzedniego."
+      update:
+        too_many_attempts: "Przekroczono limit nieudanych prób wpisania kodu weryfikacyjnego. Należy zresetować kod."
