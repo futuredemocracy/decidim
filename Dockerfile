@@ -1,4 +1,4 @@
-ARG ruby_version=3.2.2
+ARG ruby_version=3.3.4
 
 FROM ruby:${ruby_version}
 
