@@ -24,5 +24,6 @@ module DemokracjaPrzyszlosci
     #
     config.time_zone = "Warsaw"
     # config.eager_load_paths << Rails.root.join("extras")
+    config.eager_load_paths << Rails.root.join("lib")
   end
 end
