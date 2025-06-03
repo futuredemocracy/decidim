@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # This migration comes from decidim (originally 20181025082245)
-# This file has been modified by `decidim upgrade:migrations` task on 2025-05-26 13:06:22 UTC
+# This file has been modified by `decidim upgrade:migrations` task on 2025-06-03 12:23:53 UTC
 class AddTimestampsToComponents < ActiveRecord::Migration[5.2]
   class Component < ApplicationRecord
     self.table_name = :decidim_components

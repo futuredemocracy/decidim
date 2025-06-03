@@ -1,4 +1,32 @@
 pl:
+  decidim:
+    accessibility:
+      secondary_menu: ""
+    comments:
+      comment_thread:
+        accessibility_label: ""
+    components:
+      comment:
+        sort_by: "Sortuj"
+    onboarding_action_message:
+      incomplete_authorization_active_title: "Twoja weryfikacja nie została zakończona."
+      pending_authorization_active_message: "Uzupełnij formularz, aby kontynuować tę akcję."
+    proposals:
+      proposals:
+        vote_button:
+          already_voted: "Już zagłosowano"
+          vote: "Głosuj"
+        votes_count:
+          count:
+            one: "Głos"
+            two: "Głosy"
+            three: "Głosy"
+            four: "Głosy"
+            other: "Głosów"
+        voting_rules:
+          title: "Zasady udziału"
+    resource:
+      controls_label: "Kontrolki zasobu"
   sms:
     authorizations:
       create:
@@ -6,4 +34,5 @@ pl:
       destroy:
         too_early: "Zresetowanie kodu weryfikacyjnego jest możliwe po upływie 10 minut od wygenerowania poprzedniego."
       update:
+        code_expired: "Kod weryfikacyjny wygasł. Należy zresetować kod."
         too_many_attempts: "Przekroczono limit nieudanych prób wpisania kodu weryfikacyjnego. Należy zresetować kod."

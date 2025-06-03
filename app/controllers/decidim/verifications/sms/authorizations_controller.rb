@@ -48,6 +48,11 @@ module Decidim
             return render :edit
           end
 
+          if authorization.created_at < 30.minutes.ago
+            flash.now[:alert] = t("sms.authorizations.update.code_expired")
+            return render :edit
+          end
+
           ConfirmUserAuthorization.call(authorization, @form, session) do
             on(:ok) do
               flash[:notice] = t("authorizations.update.success", scope: "decidim.verifications.sms")

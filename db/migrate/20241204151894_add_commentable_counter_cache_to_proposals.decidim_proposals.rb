@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # This migration comes from decidim_proposals (originally 20200827154156)
-# This file has been modified by `decidim upgrade:migrations` task on 2025-05-26 13:06:22 UTC
+# This file has been modified by `decidim upgrade:migrations` task on 2025-06-03 12:23:53 UTC
 class AddCommentableCounterCacheToProposals < ActiveRecord::Migration[5.2]
   def change
     add_column :decidim_proposals_proposals, :comments_count, :integer, null: false, default: 0, index: true
