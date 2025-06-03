@@ -37,4 +37,5 @@ en:
       destroy:
         too_early: "Resetting the verification code is only possible 10 minutes after the previous one was generated."
       update:
+        code_expired: "The verification code expired. Please reset the code."
         too_many_attempts: "You have exceeded the maximum number of failed verification attempts. Please reset the code."
