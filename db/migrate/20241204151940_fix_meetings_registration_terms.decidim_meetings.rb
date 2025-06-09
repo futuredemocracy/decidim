@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # This migration comes from decidim_meetings (originally 20201016065302)
-# This file has been modified by `decidim upgrade:migrations` task on 2025-06-03 12:23:53 UTC
+# This file has been modified by `decidim upgrade:migrations` task on 2025-06-09 11:07:19 UTC
 class FixMeetingsRegistrationTerms < ActiveRecord::Migration[5.2]
   def up
     reset_column_information
