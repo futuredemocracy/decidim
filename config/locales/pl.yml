@@ -199,7 +199,7 @@ pl:
       ephemeral_authorized_message: "Pomyślnie zostałeś zweryfikowany.<br/>Rozpocząłeś sesję gościa, możesz teraz uczestniczyć."
       expired_authorization_active_title: "Twoja autoryzacja wygasła."
       finish_authorization_process: "Możesz dokończyć proces autoryzacji"
-      pending_authorization_active_message: "W celu ochrony Twojej prywatności, nie przechowujemy Twojego numeru telefonu w formie jawnej. Zamiast tego stosujemy proces zwany hashowaniem. Polega on na zamianie Twojego numeru w unikalny, anonimowy ciąg znaków (tzw. hash) przy użyciu funkcji skrótu. Twój numer telefonu nie jest powiązany z Twoim kontem, a jedynie użyty do autoryzacji."
+      pending_authorization_active_message: "Musimy zweryfikować Twoją tożsamość"
       pending_authorization_active_title: "Uzupełnij formularz, aby kontynuować tę akcję."
       pending_ephemeral_authorization: "Proszę zweryfikuj swoją tożsamość, aby kontynuować."
     open_data:
@@ -254,6 +254,8 @@ pl:
         text: "Kod weryfikacyjny portalu decydujemy.org.pl: %{code}. Nie udostepniaj go nikomu. Fundacja Demokracja Przyszlosci"
       destroy:
         too_early: "Zresetowanie kodu weryfikacyjnego jest możliwe po upływie 10 minut od wygenerowania poprzedniego."
+      new:
+        privacy_info: "W celu ochrony Twojej prywatności, nie przechowujemy Twojego numeru telefonu w formie jawnej. Zamiast tego stosujemy proces zwany hashowaniem. Polega on na zamianie Twojego numeru w unikalny, anonimowy ciąg znaków (tzw. hash) przy użyciu funkcji skrótu. Twój numer telefonu nie jest powiązany z Twoim kontem, a jedynie użyty do autoryzacji."
       update:
         code_expired: "Kod weryfikacyjny wygasł. Należy zresetować kod."
         too_many_attempts: "Przekroczono limit nieudanych prób wpisania kodu weryfikacyjnego. Należy zresetować kod."
