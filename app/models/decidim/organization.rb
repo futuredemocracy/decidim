@@ -35,6 +35,8 @@ module Decidim
 
     has_many :templates, foreign_key: "decidim_organization_id", class_name: "Decidim::Templates::Template", dependent: :destroy if defined? Decidim::Templates
 
+    has_many :taxonomies, foreign_key: "decidim_organization_id", class_name: "Decidim::Taxonomy", inverse_of: :organization, dependent: :destroy
+
     # Users registration mode. Whether users can register or access the system. Does not affect users that access through Omniauth integrations.
     #  enabled: Users registration and sign in are enabled (default value).
     #  existing: Users cannot be registered in the system. Only existing users can sign in.
@@ -58,7 +60,7 @@ module Decidim
     has_one_attached :highlighted_content_banner_image
     validates_upload :highlighted_content_banner_image, uploader: Decidim::ImageUploader
 
-    has_one_attached :open_data_file
+    has_many_attached :open_data_files
 
     validate :unique_name
 
@@ -148,8 +150,10 @@ module Decidim
       !users_registration_mode_disabled?
     end
 
-    def open_data_file_path
-      "#{host}-open-data.zip"
+    def open_data_file_path(resource = nil)
+      return "#{host}-open-data.zip" if resource.nil?
+
+      "#{host}-open-data-#{resource}.csv"
     end
 
     def enabled_omniauth_providers
@@ -211,15 +215,15 @@ module Decidim
     def omniauth_provider_settings(provider)
       @omniauth_provider_settings ||= Hash.new do |hash, provider_key|
         hash[provider_key] = begin
-                               omniauth_settings.each_with_object({}) do |(key, value), provider_settings|
-                                 next unless key.to_s.include?(provider_key.to_s)
+          omniauth_settings.each_with_object({}) do |(key, value), provider_settings|
+            next unless key.to_s.include?(provider_key.to_s)
 
-                                 value = Decidim::AttributeEncryptor.decrypt(value) if Decidim::OmniauthProvider.value_defined?(value)
-                                 setting_key = Decidim::OmniauthProvider.extract_setting_key(key, provider_key)
+            value = Decidim::AttributeEncryptor.decrypt(value) if Decidim::OmniauthProvider.value_defined?(value)
+            setting_key = Decidim::OmniauthProvider.extract_setting_key(key, provider_key)
 
-                                 provider_settings[setting_key] = value
-                               end
-                             end
+            provider_settings[setting_key] = value
+          end
+        end
       end
       @omniauth_provider_settings[provider]
     end

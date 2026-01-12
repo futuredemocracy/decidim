@@ -1,4 +1,4 @@
-ARG ruby_version=3.2.2
+ARG ruby_version=3.3.4
 
 FROM ruby:${ruby_version}
 
@@ -26,9 +26,9 @@ RUN gem install bundler --version '>= 2.3.12'
 COPY Gemfile /code/Gemfile
 COPY Gemfile.lock /code/Gemfile.lock
 
-RUN bundle check || bundle install
-
 COPY . /code
+
+RUN bundle check || bundle install
 
 RUN #yarn install
 RUN npm install

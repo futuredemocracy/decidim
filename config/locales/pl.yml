@@ -1,0 +1,261 @@
+pl:
+  decidim:
+    accessibility:
+      secondary_menu: ""
+    comments:
+      comment_thread:
+        accessibility_label: ""
+    components:
+      comment:
+        sort_by: "Sortuj"
+    debates:
+      debates:
+        show:
+          close_debate: "Zamknij"
+          edit_debate: "Edytuj"
+    download_your_data:
+      export:
+        ready: "Gotowe"
+      help:
+        comment_votes:
+          comment: "ID komentarza, na który oddano głos"
+          created_at: "Data utworzenia głosu"
+          id: "ID głosu"
+          updated_at: "Data ostatniej aktualizacji głosu"
+          weight: "Waga głosu (1 za, -1 przeciw)"
+        comments:
+          alignment: "Czy komentarz był za, przeciw czy neutralny"
+          author: "Imię i nazwisko uczestnika, który dodał komentarz"
+          body: "Treść komentarza"
+          commentable_id: "Unikalny ID zasobu komentowanego"
+          commentable_type: "Typ komentowanego zasobu (np. wynik, propozycja itp.)"
+          created_at: "Data utworzenia komentarza"
+          depth: "Poziom, na którym znajduje się komentarz w drzewie komentarzy (czy to odpowiedź, czy odpowiedź na odpowiedź)"
+          id: "ID komentarza"
+          locale: "Język ustawiony przez uczestnika podczas dodawania komentarza"
+          root_commentable_url: "URL zasobu powiązanego z tym komentarzem"
+          user_group: "Nazwa grupy użytkowników, która dodała komentarz (jeśli dotyczy)"
+        core:
+          description: "To są pliki zawierające dane osobowe, wkłady i aktywność użytkownika %{user_name}"
+          title: "Pobierz swoje pliki z danymi z %{organization}"
+        follows:
+          created_at: "Data i godzina utworzenia obserwacji"
+          followable: "Zasób lub przestrzeń, która jest obserwowana"
+          id: "Unikalny identyfikator tej obserwacji"
+          updated_at: "Data i godzina ostatniej aktualizacji obserwacji"
+        identities:
+          created_at: "Data i godzina utworzenia tożsamości"
+          id: "Unikalny identyfikator tej tożsamości"
+          provider: "Dostawca tej tożsamości"
+          uid: "Unikalny identyfikator tej tożsamości"
+          updated_at: "Data i godzina ostatniej aktualizacji tożsamości"
+          user: "Użytkownik, do którego należy ta tożsamość"
+        messaging_conversations:
+          created_at: "Data utworzenia tej rozmowy"
+          id: "Unikalny identyfikator tej rozmowy"
+          messages: "Wiadomości w tej rozmowie"
+          updated_at: "Data ostatniej aktualizacji tej rozmowy"
+        notifications:
+          created_at: "Data i godzina utworzenia powiadomienia"
+          event_class: "Klasa zdarzenia, które wywołało powiadomienie"
+          event_name: "Nazwa zdarzenia, które wywołało powiadomienie"
+          extra: "Dodatkowe informacje o powiadomieniu"
+          id: "Unikalny identyfikator tego powiadomienia"
+          resource_type: "Typ zasobu, którego dotyczy powiadomienie"
+          updated_at: "Data i godzina ostatniej aktualizacji powiadomienia"
+        participatory_space_private_users:
+          created_at: "Data i godzina utworzenia tego prywatnego użytkownika"
+          id: "Unikalny identyfikator tego prywatnego użytkownika"
+          privatable_to: "Przestrzeń, do której należy ten prywatny użytkownik"
+          published: "Czy ten prywatny użytkownik jest opublikowany"
+          role: "Rola tego prywatnego użytkownika"
+          updated_at: "Data i godzina ostatniej aktualizacji prywatnego użytkownika"
+        proposal_comments:
+          alignment: "Czy komentarz był za, przeciw czy neutralny"
+          author: "Imię i nazwisko uczestnika, który dodał komentarz"
+          body: "Treść komentarza"
+          commentable_id: "Unikalny ID zasobu komentowanego"
+          commentable_type: "Typ komentowanego zasobu (np. wynik, propozycja itp.)"
+          created_at: "Data utworzenia komentarza"
+          depth: "Poziom, na którym znajduje się komentarz w drzewie komentarzy (czy to odpowiedź, czy odpowiedź na odpowiedź)"
+          id: "ID komentarza"
+          locale: "Język ustawiony przez uczestnika podczas dodawania komentarza"
+          root_commentable_url: "URL zasobu powiązanego z tym komentarzem"
+          user_group: "Nazwa grupy użytkowników, która dodała komentarz (jeśli dotyczy)"
+        proposals:
+          address: "Adres propozycji, jeśli dotyczy lokalizacji fizycznej"
+          answer: "Odpowiedź na propozycję, jeśli została udzielona"
+          answered_at: "Data udzielenia odpowiedzi na propozycję"
+          attachments: "Liczba załączników do tej propozycji"
+          author: "Dane autora propozycji"
+          body: "Treść propozycji"
+          coauthorships_count: "Liczba współautorów tej propozycji"
+          comments: "Liczba komentarzy do tej propozycji"
+          component: "Komponent, do którego należy ta propozycja"
+          cost: "Szacowany koszt realizacji propozycji"
+          cost_report: "Raport kosztów dotyczący propozycji"
+          created_at: "Data utworzenia propozycji"
+          created_in_meeting: "Czy propozycja została utworzona podczas spotkania"
+          endorsements: "Liczba poparć (polubień) dla tej propozycji"
+          execution_period: "Okres realizacji propozycji"
+          follows_count: "Liczba obserwujących tę propozycję"
+          id: "Unikalny identyfikator propozycji"
+          is_amend: "Czy propozycja jest poprawką do innej propozycji"
+          latitude: "Szerokość geograficzna, jeśli propozycja dotyczy lokalizacji fizycznej"
+          longitude: "Długość geograficzna, jeśli propozycja dotyczy lokalizacji fizycznej"
+          meeting_urls: "Adresy URL spotkań, na których omawiano tę propozycję"
+          original_proposal: "Odniesienie do oryginalnej propozycji, jeśli jest to poprawka"
+          participatory_space: "Przestrzeń partycypacyjna, do której należy ta propozycja (np. proces, zgromadzenie)"
+          published_at: "Data publikacji propozycji"
+          reference: "Unikalny identyfikator propozycji w systemie"
+          related_proposals: "Propozycje powiązane z tą propozycją"
+          state: "Status propozycji (np. 'Zaakceptowana')"
+          state_published_at: "Data publikacji bieżącego statusu propozycji"
+          taxonomies: "Taksonomie, do których należy ta propozycja"
+          title: "Tytuł propozycji"
+          updated_at: "Data ostatniej aktualizacji propozycji"
+          url: "Adres URL, pod którym dostępna jest propozycja"
+          votes: "Liczba głosów oddanych na tę propozycję"
+          withdrawn: "Czy propozycja została wycofana"
+          withdrawn_at: "Data wycofania propozycji"
+        reports:
+          created_at: "Data i godzina utworzenia zgłoszenia"
+          details: "Szczegóły tego zgłoszenia"
+          id: "Unikalny identyfikator tego zgłoszenia"
+          locale: "Język tego zgłoszenia"
+          moderation: "Moderacja dotycząca tego zgłoszenia"
+          reason: "Powód zgłoszenia"
+          updated_at: "Data i godzina ostatniej aktualizacji zgłoszenia"
+        user_groups:
+          document_number: "Numer dokumentu tej grupy użytkowników"
+          id: "Unikalny identyfikator tej grupy użytkowników"
+          name: "Nazwa tej grupy użytkowników"
+          phone: "Numer telefonu tej grupy użytkowników"
+          verified_at: "Data i godzina weryfikacji tej grupy użytkowników"
+        users:
+          about: "Biogram tego użytkownika"
+          accepted_tos_version: "Data zaakceptowania regulaminu tej platformy przez użytkownika"
+          admin: "Czy ten użytkownik jest administratorem"
+          confirmation_sent_at: "Data i godzina wysłania potwierdzenia"
+          confirmed_at: "Data i godzina potwierdzenia konta użytkownika"
+          created_at: "Data i godzina utworzenia użytkownika"
+          current_sign_in_at: "Data i godzina obecnego logowania"
+          current_sign_in_ip: "Adres IP obecnego logowania"
+          delete_reason: "Powód usunięcia tego użytkownika"
+          deleted_at: "Data i godzina usunięcia użytkownika"
+          email: "Adres e-mail tego użytkownika"
+          followers_count: "Liczba uczestników obserwujących tego użytkownika"
+          following_count: "Liczba uczestników obserwowanych przez tego użytkownika"
+          id: "Unikalny identyfikator tego użytkownika"
+          invitation_accepted_at: "Data i godzina zaakceptowania zaproszenia"
+          invitation_created_at: "Data i godzina utworzenia zaproszenia"
+          invitation_sent_at: "Data i godzina wysłania zaproszenia"
+          invitations_count: "Liczba zaproszeń wysłanych do tego użytkownika"
+          invited_by: "Użytkownik, który zaprosił tego użytkownika"
+          last_sign_in_at: "Data i godzina ostatniego logowania"
+          last_sign_in_ip: "Adres IP ostatniego logowania"
+          locale: "Język wybrany przez użytkownika"
+          managed: "Czy ten użytkownik jest zarządzany przez innego użytkownika"
+          name: "Imię i nazwisko użytkownika"
+          newsletter_notifications_at: "Data i godzina ostatniego otrzymania newslettera"
+          nickname: "Pseudonim użytkownika"
+          notification_settings: "Ustawienia powiadomień wybrane przez użytkownika"
+          notifications_sending_frequency: "Częstotliwość otrzymywania powiadomień przez użytkownika"
+          officialized_as: "Tytuł oficjalny (Radny, Burmistrz itp.)"
+          officialized_at: "Data i godzina uzyskania statusu oficjalnego"
+          organization: "Organizacja, do której należy użytkownik"
+          password_updated_at: "Data ostatniej zmiany hasła"
+          personal_url: "Osobisty adres URL użytkownika"
+          remember_created_at: "Data i godzina zaznaczenia opcji zapamiętania użytkownika"
+          reset_password_sent_at: "Data i godzina wysłania linku do resetu hasła"
+          roles: "Rola użytkownika, jeśli została przypisana"
+          sign_in_count: "Liczba logowań użytkownika"
+          type: "Typ użytkownika"
+          unconfirmed_email: "Adres e-mail, który nie został jeszcze potwierdzony"
+          updated_at: "Data i godzina ostatniej aktualizacji użytkownika"
+      show:
+        action: "Akcja"
+        download: "Pobierz plik"
+        download_data: "Pobieranie danych"
+        download_data_description_1: "Tutaj znajdziesz wszystkie dostępne do pobrania pliki związane z Twoim kontem. Pliki .zip będą dostępne przez dwa tygodnie, a następnie zostaną usunięte."
+        download_data_description_2: "Możesz poprosić o plik .zip zawierający Twoje zgłoszenia i dane osobowe."
+        download_your_data: "Dane osobowe"
+        expiration: "Data wygaśnięcia"
+        expired: "Wygasło"
+        explanation:
+          body_1: "Te pliki to zestawy danych wyeksportowanych z Twojej aktywności na tej platformie, takich jak propozycje czy komentarze. Zawierają surowe, ustrukturyzowane dane, które można wykorzystać do analizy, badań lub integracji z innymi narzędziami."
+          body_2: "Pliki są w formacie CSV (Comma-Separated Values), który jest powszechnie używanym formatem plików, możliwym do otwarcia i przetworzenia w różnych aplikacjach, w tym arkuszach kalkulacyjnych, edytorach tekstu i narzędziach do analizy danych."
+          title: "Czym są te pliki?"
+        files_to_download: "Pliki do pobrania"
+        request_data: "Poproś o dane"
+        type: "Typ pobierania"
+    notifications_settings:
+      show:
+        assigned_to_proposal: "Przypisany do propozycji"
+        valuators: "Weryfikatorzy"
+    onboarding_action_message:
+      incomplete_authorization_active_title: "Twoja weryfikacja nie została zakończona."
+      click_link: "Kliknij tutaj"
+      ephemeral_authorized_message: "Pomyślnie zostałeś zweryfikowany.<br/>Rozpocząłeś sesję gościa, możesz teraz uczestniczyć."
+      expired_authorization_active_title: "Twoja autoryzacja wygasła."
+      finish_authorization_process: "Możesz dokończyć proces autoryzacji"
+      pending_authorization_active_message: "Musimy zweryfikować Twoją tożsamość"
+      pending_authorization_active_title: "Uzupełnij formularz, aby kontynuować tę akcję."
+      pending_ephemeral_authorization: "Proszę zweryfikuj swoją tożsamość, aby kontynuować."
+    open_data:
+      index:
+        detailed:
+          body_1: "Poniżej znajduje się opis każdego zestawu danych, w tym jego struktura (schemat) oraz rodzaj zawartych w nim informacji:"
+          title: "Szczegółowe wyjaśnienie każdego pliku"
+        how_to:
+          step_1:
+            body_html: "Kliknij w poniższe linki, aby pobrać pliki CSV na swój komputer."
+            title: "1. Pobierz pliki"
+          step_2:
+            body_html: |-
+              <ul>
+                <li><b>Aplikacje arkuszy kalkulacyjnych</b>: Możesz otworzyć pliki CSV za pomocą programów takich jak Microsoft Excel, Google Sheets lub LibreOffice Calc. Wystarczy otworzyć aplikację, wybrać „Otwórz” z menu Plik i wskazać pobrany plik CSV.</li>
+                <li><b>Edytory tekstu</b>: Pliki CSV można również otwierać w dowolnym edytorze tekstu, np. Notatnik lub Sublime Text. Zobaczysz wtedy surowe dane, gdzie każda linia odpowiada wierszowi, a wartości są oddzielone przecinkami.</li>
+                <li><b>Narzędzia analizy danych</b>: Jeśli znasz narzędzia do analizy danych, takie jak Python (z pandas), R lub bazy danych SQL, możesz zaimportować te pliki CSV bezpośrednio do analizy.</li>
+              </ul>
+            title: "2. Otwórz pliki"
+          step_3:
+            body_html: |-
+              <ul>
+                <li><b>Filtrowanie i sortowanie</b>: W aplikacjach arkuszy kalkulacyjnych możesz filtrować i sortować dane, aby skupić się na konkretnych zestawach informacji.</li>
+                <li><b>Analiza</b>: Wykorzystaj dane do przeprowadzania różnych analiz, takich jak zliczanie propozycji, analiza trendów w komentarzach czy ocena uczestnictwa w spotkaniach.</li>
+                <li><b>Wizualizacja</b>: Możesz tworzyć wykresy, grafy i inne wizualizacje, aby lepiej interpretować dane.</li>
+              </ul>
+            title: "3. Praca z danymi"
+          title: "Jak otwierać i pracować z tymi plikami"
+    proposals:
+      proposals:
+        vote_button:
+          already_voted: "Już zagłosowano"
+          vote: "Głosuj"
+        votes_count:
+          count:
+            one: "Głos"
+            two: "Głosy"
+            three: "Głosy"
+            four: "Głosy"
+            other: "Głosów"
+        voting_rules:
+          title: "Zasady udziału"
+    resource:
+      controls_label: "Kontrolki zasobu"
+    verifications:
+      authorizations:
+        onboarding_pending:
+          completed_verifications: "Zostałeś pomyślnie zweryfikowany, teraz możesz %{action} w %{resource_name}"
+  sms:
+    authorizations:
+      create:
+        text: "Kod weryfikacyjny portalu decydujemy.org.pl: %{code}. Nie udostepniaj go nikomu. Fundacja Demokracja Przyszlosci"
+      destroy:
+        too_early: "Zresetowanie kodu weryfikacyjnego jest możliwe po upływie 10 minut od wygenerowania poprzedniego."
+      new:
+        privacy_info: "W celu ochrony Twojej prywatności, nie przechowujemy Twojego numeru telefonu w formie jawnej. Zamiast tego stosujemy proces zwany hashowaniem. Polega on na zamianie Twojego numeru w unikalny, anonimowy ciąg znaków (tzw. hash) przy użyciu funkcji skrótu. Twój numer telefonu nie jest powiązany z Twoim kontem, a jedynie użyty do autoryzacji."
+      update:
+        code_expired: "Kod weryfikacyjny wygasł. Należy zresetować kod."
+        too_many_attempts: "Przekroczono limit nieudanych prób wpisania kodu weryfikacyjnego. Należy zresetować kod."
