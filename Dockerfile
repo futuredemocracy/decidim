@@ -15,9 +15,11 @@ RUN apt-get update && apt-get install -y \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
-RUN curl -fsSL https://deb.nodesource.com/setup_22.x | bash - \
-  && apt-get install -y nodejs \
-  && apt-get clean \
+RUN set -eux; \
+  curl -fsSL https://deb.nodesource.com/setup_22.x | bash -; \
+  apt-get install -y nodejs; \
+  apt-get clean; \
+  rm -rf /var/lib/apt/lists/*
 
 RUN npm install -g npm@10.9.2
 RUN npm install -g yarn@1.22.18
