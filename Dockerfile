@@ -15,11 +15,11 @@ RUN apt-get update && apt-get install -y \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
-RUN curl -sL https://deb.nodesource.com/setup_16.x | bash - \
+RUN curl -fsSL https://deb.nodesource.com/setup_22.x | bash - \
   && apt-get install -y nodejs \
   && apt-get clean
 
-RUN npm install -g npm@7.21.1
+RUN npm install -g npm@10.9.2
 RUN npm install -g yarn@1.22.18
 RUN gem install bundler --version '>= 2.3.12'
 
